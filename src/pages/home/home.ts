@@ -30,9 +30,9 @@ export class HomePage {
 
   //Your answer objects referenced by the view
   data = {
-      answer0: { "found": false, "checked": false, "content": { "aid": 0, "answer": "" } },
-      answer1: { "found": false, "checked": false, "content": { "aid": 1, "answer": "" } },
-      answer2: { "found": false, "checked": false, "content": { "aid": 2, "answer": "" } },
+    answer0: { "found": false, "checked": false,  "aid": 0  },
+    answer1: { "found": false, "checked": false,  "aid": 1 },
+    answer2: { "found": false, "checked": false,  "aid": 2 }
   };
 
   //Your Beacons, see docu
