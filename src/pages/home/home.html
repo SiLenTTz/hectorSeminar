@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Quiz Time</ion-title>
+    <label class="score">Your score {{points}}</label>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>The Quiz Master</h3>
+  <br>
+  <div>
+    <div *ngIf="qReady">
+          <label>{{qText}} </label>
+    </div>
+
+    <div *ngIf="!qReady">
+          <label>Go ahead and search the Beacon</label>
+    </div>
+  </div>
+
+  <br>
+  <div  *ngIf="data.answer0.found">
+
+  </div>
+  <br>
+  <div *ngIf="data.answer1.found">
+
+  </div>
+  <br>
+  <div *ngIf="data.answer2.found">
+  
+  </div>
+
+<div class="horizontalButtonBar">
+  <button ion-button icon-start (click)="proofResult()" class="buttonL" round>
+    <ion-icon  name="nuclear"></ion-icon>
+    Check answer
+  </button>
+
+  <button ion-button color="danger" icon-start (click)="showHighscore()"  class="buttonR" round>
+    <ion-icon  name="game-controller-a"></ion-icon>
+    Highscores
+  </button>
+</div>
+</ion-content>
