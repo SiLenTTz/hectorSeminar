@@ -36,6 +36,12 @@ export class UserPage {
   }
 
   getName() {
-
+    this.httpProvider.getUserId(this.username).subscribe(response => {
+      console.log("positive userid get");
+        this.uid = response.json()["uid"];
+        this.navCtrl.push(HomePage, {uid: this.uid});
+    }, error =>{
+      this.presentAlert(error.json()["message"]);
+    });
   }
 }

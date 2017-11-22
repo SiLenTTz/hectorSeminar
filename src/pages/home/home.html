@@ -24,15 +24,21 @@
 
   <br>
   <div  *ngIf="data.answer0.found">
-
+    <ion-checkbox  [(ngModel)]="data.answer0.checked"></ion-checkbox>
+    <ion-icon name="bulb"></ion-icon>
+    <label>{{a1}}</label>
   </div>
   <br>
   <div *ngIf="data.answer1.found">
-
+    <ion-checkbox [(ngModel)]="data.answer1.checked"></ion-checkbox>
+    <ion-icon name="bulb"></ion-icon>
+    <label>{{a2}}</label>
   </div>
   <br>
   <div *ngIf="data.answer2.found">
-  
+    <ion-checkbox [(ngModel)]="data.answer2.checked"></ion-checkbox>
+    <ion-icon name="bulb"></ion-icon>
+<label>{{a3}}</label>
   </div>
 
 <div class="horizontalButtonBar">

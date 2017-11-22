@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Scores</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h3 class="label">Highscores:</h3>
+  <br>
+
+  <ion-list>
+
+  <ion-list-header *ngFor="let t of teams" >{{t.name}}
+    <ion-item>
+      <ion-avatar item-start>
+        <ion-icon name="game-controller-a"></ion-icon>
+      </ion-avatar>
+      <h2>{{t.username}}</h2>
+        <h2>{{t.score}}</h2>
+    </ion-item>
+  </ion-list-header>
+  </ion-list>
+
+</ion-content>
